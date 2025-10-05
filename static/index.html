@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบตรวจสอบอันตรกิริยาของยา</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ระบบตรวจสอบอันตรกิริยาของยา</h1>
+            <div id="status" class="status-indicator">
+                <span id="status-dot"></span>
+                <span id="status-text">กำลังตรวจสอบ...</span>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <input type="text" id="drug-input" placeholder="กรอกชื่อยา (ภาษาไทยหรืออังกฤษ)" autocomplete="off">
+            <ul id="suggestions-list" class="suggestions"></ul>
+        </div>
+        
+        <div class="selected-drugs-section">
+            <div id="selected-drugs-list"></div>
+            <button id="check-btn" disabled>ตรวจสอบปฏิกิริยายา</button>
+            <button id="clear-btn">ลบทั้งหมด</button>
+        </div>
+
+        <div id="loading" class="hidden">กำลังตรวจสอบปฏิกิริยา...</div>
+        
+        <div id="results" class="results-section"></div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
